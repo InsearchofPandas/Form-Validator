@@ -10,7 +10,10 @@
     <title>Form Validator</title>
   </head>
   <body>
-    <div class="container">
+    <div id="success" class="container2">
+      <h2>WELCOME!</h2>
+    </div>
+    <div id="form-container" class="container">
       <form id="form" class="form">
         <h2>Create Account</h2>
         <div class="form-control">
@@ -18,7 +21,7 @@
           <input
             type="text"
             id="username"
-            placeholder="Enter username"
+            placeholder="Username"
           />
           <small>Error message will display here</small>
         </div>
@@ -27,7 +30,7 @@
           <input
             type="text"
             id="email"
-            placeholder="Enter email"
+            placeholder="Email"
           />
           <small>Error message will display here</small>
         </div>
@@ -36,9 +39,30 @@
           <input
             type="password"
             id="password"
-            placeholder="Enter password"
+            placeholder="Password"
           />
-          <small>Error message will display here</small>
+          <div id="password-strength">
+            <div id="password-strength-status"></div>
+          </div>
+          <small></small>
+          <small id="rules">
+            <span>X</span> Must include a lowercase
+            character.
+          </small>
+          <small id="rules2">
+            <span>X</span> Must include a uppercase
+            character.
+          </small>
+          <small id="rules3">
+            <span>X</span> Must include a special character.
+          </small>
+          <small id="rules4">
+            <span>X</span> Must include a number.
+          </small>
+          <small id="rules5">
+            <span>X</span> Password must be between 6 and 14
+            characters.
+          </small>
         </div>
         <div class="form-control">
           <label for="password2">Confirm Password</label>

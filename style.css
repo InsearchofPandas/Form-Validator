@@ -13,8 +13,8 @@ body {
   background-color: #d2f0e4;
   background-image: linear-gradient(
     to bottom right,
-    #cdffeb,
-    #aadef3
+    #cdffeb33,
+    #aadef346
   );
   font-family: 'Open Sans', sans-serif;
   display: flex;
@@ -27,7 +27,7 @@ body {
 h2 {
   text-align: center;
   margin: 0 0 20px;
-  color: #3ab298;
+  color: #45ceb0;
   font-weight: 800;
   font-size: 34px;
 }
@@ -39,18 +39,27 @@ h2 {
   width: 400px;
 }
 
+.container2 {
+  background-color: #fff;
+  border-radius: 25px;
+  box-shadow: 12px 20px 20px rgba(15, 49, 51, 0.3);
+  height: 400px;
+  width: 400px;
+  display: none;
+}
+
 .form {
   padding: 30px 40px;
 }
 
 .form-control {
-  margin-bottom: 10px;
-  padding-bottom: 20px;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
   position: relative;
 }
 
 .form-control label {
-  color: #777;
+  color: rgb(94, 94, 94);
   display: block;
   margin-bottom: 5px;
   font-weight: 600;
@@ -59,10 +68,10 @@ h2 {
 .form-control input {
   background-color: #e7f3f3;
   border: 2px solid #f0f0f0;
-  border-radius: 6px;
+  border-radius: 8px;
   display: block;
   width: 100%;
-  padding: 10px;
+  padding: 14px;
   font-size: 16px;
 }
 
@@ -92,13 +101,43 @@ h2 {
 
 .form button {
   cursor: pointer;
-  background-color: #3ab298;
-  border: 2px solid #3ab298;
-  border-radius: 12px;
+  background-color: #45ceb0;
+  border: 2px solid #45ceb0;
+  border-radius: 60px;
   color: #fff;
   display: block;
   font-size: 16px;
   padding: 18px;
   margin-top: 20px;
   width: 100%;
+}
+
+.form button:hover {
+  background-color: #62ddc2;
+  border: 2px solid #62ddc2;
+}
+
+.form button:focus {
+  outline: none;
+  border: none;
+}
+
+#password-strength {
+  height: 10px;
+  width: 100%;
+  background-color: white;
+  /* border: 1px solid gray; */
+  position: relative;
+  display: none;
+}
+
+.password-strength.focus {
+  visibility: visible;
+}
+
+#password-strength-status {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background-color: red;
 }
