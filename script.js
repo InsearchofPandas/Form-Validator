@@ -13,7 +13,7 @@ let password2Ok = 0
 
 // Show input error message
 function showError(input, message) {
-    const formControl = input.parentElement;
+    const formControl = input.parentElement.parentElement;
     formControl.className = 'form-control error';
     const small = formControl.querySelector('small');
     small.innerText = message;
@@ -22,7 +22,7 @@ function showError(input, message) {
 
 // Show success
 function showSuccess(input) {
-    const formControl = input.parentElement;
+    const formControl = input.parentElement.parentElement;
     formControl.className = 'form-control success';
 }
 
@@ -99,13 +99,24 @@ function confirmPassword(p1, p2 ){ if (p1.value && p1.value !== p2.value) {
         return input.id.charAt(0).toUpperCase() + input.id.slice(1);
     }
 
+
+
+// toggle password visibility 
+function togglePassword(input) {
+    var x = document.getElementById(input);
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+  }
+
 // Event listners 
 
 
 // final validation
 form.addEventListener('submit', function(e) {
     e.preventDefault();
-
     checkRequired([username, email, password]);
     checkLengthUser(username, 4, 10)
     validateEmail(email)
@@ -242,3 +253,17 @@ if (pLengthMin === 1 ) {
 password2.addEventListener('focusout', function(e) {
     confirmPassword(password, password2)
 })
+
+// handle password visibility 
+
+password_revail.addEventListener('click', function(e) {
+    e.preventDefault();
+    togglePassword('password');
+})
+
+
+password_revail2.addEventListener('click', function(e) {
+    e.preventDefault();
+  togglePassword('password2');
+})
+

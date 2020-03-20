@@ -65,27 +65,59 @@ h2 {
   font-weight: 600;
 }
 
-.form-control input {
+.inputbackground {
+  display: flex;
   background-color: #e7f3f3;
   border: 2px solid #f0f0f0;
   border-radius: 8px;
+  align-items: center;
+  height: 50px;
+  padding-left: 8px;
+  padding-right: 16px;
+}
+
+#icon {
+  stroke: #9aaca8;
+}
+
+#password_revail {
+  fill: #7d8f8b;
+  cursor: pointer;
+}
+
+#password_revail:hover {
+  fill: rgb(149, 165, 197);
+}
+
+#password_revail2 {
+  fill: #7d8f8b;
+  cursor: pointer;
+}
+
+#password_revail2:hover {
+  fill: rgb(149, 165, 197);
+}
+
+.form-control input {
+  background-color: #e7f3f3;
+  border: 2px solid #e7f3f3;
+  padding-left: 10px;
   display: block;
   width: 100%;
-  padding: 14px;
+
   font-size: 16px;
 }
 
 .form-control input:focus {
   outline: 0;
   color: rgb(80, 80, 80);
-  background-color: rgb(239, 255, 250);
 }
 
-.form-control.success input {
+.form-control.success div {
   border-color: var(--success-color);
 }
 
-.form-control.error input {
+.form-control.error div {
   border-color: var(--error-color);
 }
 
